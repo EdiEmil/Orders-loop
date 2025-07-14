@@ -1,5 +1,5 @@
 # Dockerfile
-FROM eclipse-temurin:21-jdk-alpine
+FROM openjdk:21-jdk-slim
 WORKDIR /app
-COPY target/*.jar order.jar
-ENTRYPOINT ["java", "-jar", "order.jar"]
+COPY target/*.jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
